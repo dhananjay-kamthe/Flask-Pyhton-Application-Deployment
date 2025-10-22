@@ -14,7 +14,7 @@ pipeline {
                 echo "🔹 Cloning repository..."
                 checkout([
                     $class: 'GitSCM',
-                    branches: [[name: '*/main']],
+                    branches: [[name: '*/master']],
                     userRemoteConfigs: [[url: 'https://github.com/dhananjay-kamthe/Flask-Pyhton-Application-Deployment.git']]
                 ])
             }
