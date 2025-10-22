@@ -15,7 +15,7 @@ pipeline {
                 checkout([
                     $class: 'GitSCM',
                     branches: [[name: '*/main']],
-                    userRemoteConfigs: [[url: 'https://github.com/HeeteshKamthe/stud-reg-flask-app-master.git']]
+                    userRemoteConfigs: [[url: 'https://github.com/dhananjay-kamthe/Flask-Pyhton-Application-Deployment.git']]
                 ])
             }
         }
