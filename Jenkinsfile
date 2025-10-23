@@ -26,9 +26,9 @@ pipeline {
                 sh '''
                     if ! dpkg -s python3-venv >/dev/null 2>&1; then
                         sudo apt-get update -y
-                        sudo yum install python3 -y
+                        sudo apt install python3 -y
                         sudo apt-get install -y python3-venv
-                        sudo yum install python3-pip -y
+                        sudo apt install python3-pip -y
                     fi
                     ${PYTHON} -m venv venv
                     . venv/bin/activate
@@ -65,7 +65,7 @@ stage('Setup Database') {
             sh """
 ssh -o StrictHostKeyChecking=no -i "$KEY_PATH" ${SSH_USER}@${EC2_HOST} 'bash -s' <<'ENDSSH'
 echo "🔹 Installing MariaDB..."
-sudo yum install -y mariadb105-server
+sudo apt install -y mariadb-server
 sudo systemctl start mariadb
 sudo systemctl enable mariadb
 
