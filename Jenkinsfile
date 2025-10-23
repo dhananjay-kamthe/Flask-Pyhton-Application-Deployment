@@ -25,11 +25,11 @@ pipeline {
                 echo "🔹 Installing dependencies..."
                 sh '''
                     if ! dpkg -s python3-venv >/dev/null 2>&1; then
-                        sudo yum update -y
+                        sudo apt-get update -y
                         sudo yum install python3 -y
-                        sudo yum install -y python3-venv
+                        sudo apt-get install -y python3-venv
                         sudo yum install python3-pip -y
-                    fi
+                    if
                     ${PYTHON} -m venv venv
                     . venv/bin/activate
                     pip install --upgrade pip
