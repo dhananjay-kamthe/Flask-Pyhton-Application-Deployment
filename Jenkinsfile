@@ -29,7 +29,7 @@ pipeline {
                         sudo yum install python3 -y
                         sudo apt-get install -y python3-venv
                         sudo yum install python3-pip -y
-                    if
+                    fi
                     ${PYTHON} -m venv venv
                     . venv/bin/activate
                     pip install --upgrade pip
