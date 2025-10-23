@@ -117,8 +117,8 @@ ENDSSH
                 echo "🔹 Installing dependencies and restarting app on EC2..."
                 ssh -o StrictHostKeyChecking=no -i "$KEY_PATH" ${SSH_USER}@${EC2_HOST} "
                     cd ${APP_DIR} &&
-                    sudo yum install python3 python3-venv -y 
-                    sudo yum install python3-pip -y
+                    sudo apt install python3 python3-venv -y 
+                    sudo apt install python3-pip -y
                     source venv/bin/activate &&
                     pip install -r requirements.txt &&
                     pip install gunicorn &&
