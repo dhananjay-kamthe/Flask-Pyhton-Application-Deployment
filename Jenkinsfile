@@ -14,8 +14,8 @@ pipeline {
                 echo "🔹 Cloning repository..."
                 checkout([
                     $class: 'GitSCM',
-                    branches: [[name: '*/master']],
-                    userRemoteConfigs: [[url: 'https://github.com/dhananjay-kamthe/Flask-Pyhton-Application-Deployment.git']]
+                    branches: [[name: '*/main']],
+                    userRemoteConfigs: [[url: 'https://github.com/HeeteshKamthe/stud-reg-flask-app-master.git']]
                 ])
             }
         }
@@ -26,9 +26,9 @@ pipeline {
                 sh '''
                     if ! dpkg -s python3-venv >/dev/null 2>&1; then
                         sudo apt-get update -y
-                        sudo apt install python3 -y
+                        sudo yum install python3 -y
                         sudo apt-get install -y python3-venv
-                        sudo apt install python3-pip -y
+                        sudo yum install python3-pip -y
                     fi
                     ${PYTHON} -m venv venv
                     . venv/bin/activate
@@ -65,7 +65,7 @@ stage('Setup Database') {
             sh """
 ssh -o StrictHostKeyChecking=no -i "$KEY_PATH" ${SSH_USER}@${EC2_HOST} 'bash -s' <<'ENDSSH'
 echo "🔹 Installing MariaDB..."
-sudo apt install -y mariadb-server
+sudo yum install -y mariadb105-server
 sudo systemctl start mariadb
 sudo systemctl enable mariadb
 
@@ -117,8 +117,8 @@ ENDSSH
                 echo "🔹 Installing dependencies and restarting app on EC2..."
                 ssh -o StrictHostKeyChecking=no -i "$KEY_PATH" ${SSH_USER}@${EC2_HOST} "
                     cd ${APP_DIR} &&
-                    sudo apt install python3 python3-venv -y 
-                    sudo apt install python3-pip -y
+                    sudo yum install python3 python3-venv -y 
+                    sudo yum install python3-pip -y
                     source venv/bin/activate &&
                     pip install -r requirements.txt &&
                     pip install gunicorn &&
