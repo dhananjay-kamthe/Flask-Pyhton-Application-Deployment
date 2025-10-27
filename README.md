@@ -287,22 +287,19 @@ stage('Deploy to EC2') {
 ## 🖼️ Visual Overview (Suggested Screenshots)
 
 1. **Project Overview**
-   <p align="center"> <img src="img/home_page.jpg" alt="home page" width="800"/> </p>
+   <p align="center"> <img src="img/home_page.png" alt="home page" width="800"/> </p>
    
 3. **Jenkins Configuration**
    <p align="center"> <img src="img/jenkins_pipeline_config.png" alt="jenkins_pipeline_config" width="800"/> </p>
    
 5. **Jenkins Build Console Output**
-   <p align="center"> <img src="img/jenkins_pipeline_success.jpg" alt="jenkins_pipeline_success" width="800"/> </p>
+   <p align="center"> <img src="img/jenkins_pipeline_success.png" alt="jenkins_pipeline_success" width="800"/> </p>
    
 7. **EC2 Running App**
-   <p align="center"> <img src="img/instances.jpg" alt="instances" width="800"/> </p>
-   
-9. **Registration Success Page**
-    <p align="center"> <img src="img/registration_success.jpg" alt="registration_success" width="800"/> </p>
+   <p align="center"> <img src="img/instances.png" alt="instances" width="800"/> </p>
     
 11. **Studnet List Page with Delete and Update Option's**
-    <p align="center"> <img src="img/view_students.jpg" alt="view_students" width="800"/> </p>
+    <p align="center"> <img src="img/view_students.png" alt="view_students" width="800"/> </p>
     
 
 ---
