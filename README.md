@@ -1,24 +1,24 @@
-🧑🏻‍🎓 Student Registration Web Application
-(Flask + Jenkins CI/CD + AWS EC2 + MariaDB + Gunicorn)
-📖 Project Introduction
+#🧑🏻‍🎓 Student Registration Web Application
+**(Flask + Jenkins CI/CD + AWS EC2 + MariaDB + Gunicorn)
+##📖 Project Introduction
 
-The Student Registration System is a Python-based Flask web application built to demonstrate a complete CI/CD pipeline using Jenkins, integrated with AWS EC2 for deployment and MariaDB as the database.
+*The Student Registration System is a Python-based Flask web application built to demonstrate a complete CI/CD pipeline using Jenkins, integrated with AWS EC2 for deployment and MariaDB as the database.
 
-The project highlights modern DevOps automation — from dependency installation to database configuration and application deployment — all executed automatically via a Jenkins pipeline.
+*The project highlights modern DevOps automation — from dependency installation to database configuration and application deployment — all executed automatically via a Jenkins pipeline.
 
-This project showcases:
+##This project showcases:
 
-Continuous Integration with Jenkins
+*Continuous Integration with Jenkins
 
-Continuous Deployment to AWS EC2
+*Continuous Deployment to AWS EC2
 
-Automated MariaDB setup and schema initialization
+*Automated MariaDB setup and schema initialization
 
-Flask backend served with Gunicorn
+*Flask backend served with Gunicorn
 
-Secure, credential-based SSH automation
+*Secure, credential-based SSH automation
 
-🧬 Technology Stack
+##🧬 Technology Stack
 Component	Technology Used
 Backend Framework	Python (Flask)
 Database	MariaDB (Auto-configured)
